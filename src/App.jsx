@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+//import { useState } from "react";
 
 //Fragments Topics
 import Table from "./Fragments/Table";
@@ -8,9 +8,12 @@ import ProfileCard from "./Fragments/ProfileCrad";
 import Fragment from "./Fragments/Fragment";
 import Modal1 from "./Fragments/Modal1";
 
+//task 06-11-25
+import LoginPortal from "./Fragments/LoginPortal";
+
 function App() {
-  const [showModal, setShowModal] = useState(false);
-  const [open, setOpen] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   // const tablestyle = {
   //   border: "5px solid white",
@@ -27,9 +30,9 @@ function App() {
             <Table />
           </tbody>
         </table> */}
-        <Fragment />
+        {/* <Fragment /> */}
 
-        <h2>Main App component</h2>
+        {/* <h2>Main App component</h2>
         <button
           style={{
             background: "blue",
@@ -95,7 +98,10 @@ function App() {
               Close
             </button>
           </Modal1>
-        )}
+        )} */}
+
+        {/* Tasks */}
+        <LoginPortal />
 
         {/* Assignments */}
         {/* <ProfileCard /> */}
