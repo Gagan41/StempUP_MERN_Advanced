@@ -7,9 +7,13 @@ import Modal from "./Fragments/Modal";
 import ProfileCard from "./Fragments/ProfileCrad";
 import Fragment from "./Fragments/Fragment";
 import Modal1 from "./Fragments/Modal1";
+import Fetch from "./Fragments/Fetch";
 
 //task 06-11-25
 import LoginPortal from "./Fragments/LoginPortal";
+import LoginImage from "./Fragments/LoginImage";
+
+//task 07-11-25
 
 function App() {
   // const [showModal, setShowModal] = useState(false);
@@ -101,7 +105,9 @@ function App() {
         )} */}
 
         {/* Tasks */}
-        <LoginPortal />
+        {/* <LoginPortal /> */}
+        {/* <Fetch /> */}
+        <LoginImage />
 
         {/* Assignments */}
         {/* <ProfileCard /> */}
