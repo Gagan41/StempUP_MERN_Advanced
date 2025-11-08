@@ -9,11 +9,18 @@ import Fragment from "./Fragments/Fragment";
 import Modal1 from "./Fragments/Modal1";
 import Fetch from "./Fragments/Fetch";
 
+//axios Topics
+import Todo from "./Fragments/Todo";
+
+//react-query
+import Posts from "./Fragments/Post";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 //task 06-11-25
 import LoginPortal from "./Fragments/LoginPortal";
-import LoginImage from "./Fragments/LoginImage";
 
 //task 07-11-25
+import LoginImage from "./Fragments/LoginImage";
 
 function App() {
   // const [showModal, setShowModal] = useState(false);
@@ -26,17 +33,20 @@ function App() {
   //   backgroundColor: "lightblue",
   // };
 
+  const client = new QueryClient();
+
   return (
-    <>
-      <div className="App">
-        {/* <table style={tablestyle}>
+    <QueryClientProvider client={client}>
+      <>
+        <div className="App">
+          {/* <table style={tablestyle}>
           <tbody>
             <Table />
           </tbody>
         </table> */}
-        {/* <Fragment /> */}
+          {/* <Fragment /> */}
 
-        {/* <h2>Main App component</h2>
+          {/* <h2>Main App component</h2>
         <button
           style={{
             background: "blue",
@@ -104,15 +114,19 @@ function App() {
           </Modal1>
         )} */}
 
-        {/* Tasks */}
-        {/* <LoginPortal /> */}
-        {/* <Fetch /> */}
-        <LoginImage />
+          {/* <Todo /> */}
+          <Posts />
 
-        {/* Assignments */}
-        {/* <ProfileCard /> */}
-      </div>
-    </>
+          {/* Tasks */}
+          {/* <LoginPortal /> */}
+          {/* <Fetch /> */}
+          {/* <LoginImage /> */}
+
+          {/* Assignments */}
+          {/* <ProfileCard /> */}
+        </div>
+      </>
+    </QueryClientProvider>
   );
 }
 
