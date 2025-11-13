@@ -1,5 +1,5 @@
 import "./App.css";
-//import { useState } from "react";
+import { useState } from "react";
 
 //Fragments Topics
 import Table from "./Fragments/Table";
@@ -21,10 +21,12 @@ import LoginPortal from "./Fragments/LoginPortal";
 
 //task 07-11-25
 import LoginImage from "./Fragments/LoginImage";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 function App() {
   // const [showModal, setShowModal] = useState(false);
   // const [open, setOpen] = useState(false);
+  const [showImages, setShowImages] = useState(true);
 
   // const tablestyle = {
   //   border: "5px solid white",
@@ -115,7 +117,21 @@ function App() {
         )} */}
 
           {/* <Todo /> */}
-          <Posts />
+          <button
+            onClick={() => setShowImages((prev) => !prev)}
+            style={{
+              background: "#0585eeff",
+              color: "white",
+              border: "none",
+              padding: "10px",
+              borderRadius: "6px",
+              cursor: "pointer",
+              marginTop: "10px",
+            }}
+          >
+            {showImages ? "hide images" : "show images"}
+          </button>
+          {showImages && <Posts />}
 
           {/* Tasks */}
           {/* <LoginPortal /> */}
@@ -126,6 +142,7 @@ function App() {
           {/* <ProfileCard /> */}
         </div>
       </>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
