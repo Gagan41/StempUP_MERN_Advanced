@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+//import { useState } from "react";
 
 //Fragments Topics
 import Table from "./Fragments/Table";
@@ -16,6 +16,12 @@ import Todo from "./Fragments/Todo";
 import Posts from "./Fragments/Post";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
+//redux
+import StoreApp from "./Redux/StoreApp";
+
+//zustand
+import ZustandStore from "./Redux/ZustandStore";
+
 //task 06-11-25
 import LoginPortal from "./Fragments/LoginPortal";
 
@@ -26,7 +32,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 function App() {
   // const [showModal, setShowModal] = useState(false);
   // const [open, setOpen] = useState(false);
-  const [showImages, setShowImages] = useState(true);
+  //const [showImages, setShowImages] = useState(true);
 
   // const tablestyle = {
   //   border: "5px solid white",
@@ -117,7 +123,7 @@ function App() {
         )} */}
 
           {/* <Todo /> */}
-          <button
+          {/* <button
             onClick={() => setShowImages((prev) => !prev)}
             style={{
               background: "#0585eeff",
@@ -131,12 +137,15 @@ function App() {
           >
             {showImages ? "hide images" : "show images"}
           </button>
-          {showImages && <Posts />}
-
+          {showImages && <Posts />} */}
           {/* Tasks */}
           {/* <LoginPortal /> */}
           {/* <Fetch /> */}
           {/* <LoginImage /> */}
+
+          {/* Redux */}
+          <StoreApp />
+          <ZustandStore />
 
           {/* Assignments */}
           {/* <ProfileCard /> */}
